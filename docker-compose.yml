@@ -1,0 +1,8 @@
+services:
+  nexus:
+    build: .
+    image: nexus_docker_bcp:v2
+    ports:
+      - "10081:8081"   # for nexus service 
+      - "10082:5001"   # for docker-hosted repo
+    restart: always
